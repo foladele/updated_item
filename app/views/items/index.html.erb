@@ -1,0 +1,14 @@
+
+<<h1>Items List</h1>
+<ul>
+	<% if @items.any? %>
+		<% @items.each do |item| %>
+		<li><%= link_to item.name, items_show(item) %></li>
+		<%= link_to 'Edit List', items_edit_path(item) %>
+		
+		<%end%>
+</ul>
+	<% else %>
+	<h3>No items has been created</h3>
+<% end %>
+<%= link_to 'Add New item', items_new_path %>

@@ -1,0 +1,7 @@
+<%= form_for @list do |l| %>
+	<p><%=l.label :completed%>
+	<%= l.check_box :completed %>
+	<%=l.label :name%>
+	<%=l.text_field :name%></p>
+	<p><%= l.submit %></p>
+<%end%>
